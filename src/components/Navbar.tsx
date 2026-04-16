@@ -4,9 +4,9 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const navLinks = [
   { label: "Home", href: "#home" },
-  { label: "About", href: "#about" },
   { label: "Services", href: "#services" },
-  { label: "Why Ewan", href: "#why-ewan" },
+  { label: "About", href: "#about" },
+  { label: "Sectors", href: "#sectors" },
   { label: "Contact", href: "#contact" },
 ];
 
@@ -34,16 +34,12 @@ const Navbar = () => {
           <motion.img
             src="/logo.png"
             alt="Ewan Business Solutions"
-            className="h-10 sm:h-12 w-auto object-contain drop-shadow-lg"
-            whileHover={{
-              scale: 1.05,
-              filter: "drop-shadow(0 0 12px rgba(208,170,55,0.4))",
-            }}
+            className="h-10 sm:h-12 w-auto object-contain"
+            whileHover={{ scale: 1.05, filter: "drop-shadow(0 0 12px rgba(208,170,55,0.5))" }}
             transition={{ type: "spring", stiffness: 400, damping: 15 }}
           />
         </a>
 
-        {/* Desktop nav */}
         <div className="hidden md:flex items-center gap-8">
           {navLinks.map((link, i) => (
             <motion.a
@@ -52,20 +48,10 @@ const Navbar = () => {
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1 * i + 0.3, duration: 0.5 }}
-              className="relative text-sm font-medium text-primary-foreground/80 hover:text-gold transition-colors duration-300 group"
+              className="relative text-sm font-medium text-foreground/70 hover:text-primary transition-colors duration-300 group"
             >
               {link.label}
-              {/* Animated stitch underline */}
-              <span className="absolute bottom-[-6px] left-0 w-0 h-[2px] group-hover:w-full transition-all duration-500 bg-gradient-to-r from-gold-dark via-gold to-gold-light" />
-              <span className="absolute bottom-[-6px] left-0 w-0 group-hover:w-full transition-all duration-500 delay-100">
-                <span
-                  className="block h-[2px]"
-                  style={{
-                    background:
-                      "repeating-linear-gradient(90deg, hsl(40 85% 58% / 0.6) 0px, hsl(40 85% 58% / 0.6) 4px, transparent 4px, transparent 8px)",
-                  }}
-                />
-              </span>
+              <span className="absolute bottom-[-6px] left-0 w-0 h-[2px] group-hover:w-full transition-all duration-500 bg-gradient-to-r from-primary via-accent to-primary" />
             </motion.a>
           ))}
           <motion.a
@@ -75,18 +61,14 @@ const Navbar = () => {
             transition={{ delay: 0.8, type: "spring", stiffness: 200 }}
             whileHover={{ scale: 1.05, boxShadow: "0 0 35px rgba(208,170,55,0.4)" }}
             whileTap={{ scale: 0.95 }}
-            className="flex items-center gap-2 px-5 py-2.5 rounded-full gold-gradient text-navy font-semibold text-sm transition-all duration-300 card-shine"
+            className="flex items-center gap-2 px-5 py-2.5 rounded-full gold-gradient text-background font-semibold text-sm transition-all duration-300 card-shine"
           >
             <Phone className="w-4 h-4" />
             Get Quote
           </motion.a>
         </div>
 
-        {/* Mobile toggle */}
-        <button
-          className="md:hidden text-primary-foreground"
-          onClick={() => setMobileOpen(!mobileOpen)}
-        >
+        <button className="md:hidden text-foreground" onClick={() => setMobileOpen(!mobileOpen)}>
           <AnimatePresence mode="wait">
             {mobileOpen ? (
               <motion.div key="close" initial={{ rotate: -90, opacity: 0 }} animate={{ rotate: 0, opacity: 1 }} exit={{ rotate: 90, opacity: 0 }} transition={{ duration: 0.2 }}>
@@ -101,7 +83,6 @@ const Navbar = () => {
         </button>
       </div>
 
-      {/* Mobile menu */}
       <AnimatePresence>
         {mobileOpen && (
           <motion.div
@@ -120,7 +101,7 @@ const Navbar = () => {
                   initial={{ x: -30, opacity: 0 }}
                   animate={{ x: 0, opacity: 1 }}
                   transition={{ delay: i * 0.08 }}
-                  className="text-primary-foreground/80 hover:text-gold transition-colors py-2 border-b border-gold/5"
+                  className="text-foreground/70 hover:text-primary transition-colors py-2 border-b border-primary/10"
                 >
                   {link.label}
                 </motion.a>
@@ -131,7 +112,7 @@ const Navbar = () => {
                 initial={{ x: -30, opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}
                 transition={{ delay: 0.4 }}
-                className="px-5 py-2.5 rounded-full gold-gradient text-navy font-semibold text-sm text-center"
+                className="px-5 py-2.5 rounded-full gold-gradient text-background font-semibold text-sm text-center"
               >
                 Get Quote
               </motion.a>
