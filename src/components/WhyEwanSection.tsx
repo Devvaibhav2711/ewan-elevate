@@ -4,18 +4,18 @@ import { Layers, Award, Landmark } from "lucide-react";
 const differentiators = [
   {
     icon: Layers,
-    title: "Language + Operations Combined",
-    desc: "We're the only partner doing both. No handoffs, no translation gaps — strategy, compliance, and language under one roof.",
+    title: "Language Meets Operations",
+    desc: "We are the only partner in India who combines 125+ language capability with full-cycle market entry management. Language isn't a support function here — it is the core of how we operate.",
   },
   {
     icon: Award,
-    title: "Real Experience, Not Theory",
-    desc: "60,000+ interpretation hours in actual boardrooms, factories, and government meetings. We've already been in the room.",
+    title: "Corridors Not Classrooms",
+    desc: "Our expertise comes from 60,000+ hours of real boardroom interpretation — in Mandarin, Japanese, Cantonese, and ASEAN languages. We didn't study these corridors. We built careers inside them.",
   },
   {
     icon: Landmark,
-    title: "Government & Institutional Recognition",
-    desc: "Recognised by the Consulate General of China. Empanelled with Bhashini (Govt of India). Trusted at the highest levels.",
+    title: "Recognised by Governments and Institutions",
+    desc: "Formally recognised by the Consulate General of the People's Republic of China. Export program designers for the Government of Maharashtra (MSAMB). Faculty at Symbiosis. IB Board curriculum designers. Our institutional credentials are not decorative — they are evidence of the depth of trust we have built across borders.",
   },
 ];
 
@@ -37,8 +37,11 @@ const WhyEwanSection = () => {
             Why Ewan
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-foreground mb-5">
-            The Partner Who's <span className="gradient-text italic">Already Been in the Room</span>
+            The Partner Who's <span className="gradient-text italic">Already Been in the Room.</span>
           </h2>
+          <p className="text-muted-foreground text-base sm:text-lg leading-relaxed">
+            Most market entry consultants have never interpreted a boardroom negotiation. Most translation agencies have never set up a subsidiary. Ewan has done both — for 10 years, across every major sector, in the corridors that matter.
+          </p>
         </motion.div>
 
         <div className="grid md:grid-cols-3 gap-6">

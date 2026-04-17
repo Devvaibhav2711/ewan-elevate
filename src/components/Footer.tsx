@@ -22,6 +22,14 @@ const certifications = [
   { name: "Bhashini Empanelled", icon: Sparkles },
 ];
 
+const socialLinks = [
+  { label: "Facebook", href: "https://www.facebook.com/EwanBusinessSolutions?mibextid=ZbWKwL" },
+  { label: "X", href: "https://x.com/ewanbusiness" },
+  { label: "Instagram", href: "https://www.instagram.com/ewanbizsolution/" },
+  { label: "LinkedIn", href: "https://www.linkedin.com/company/ewan-business-solutions/" },
+  { label: "YouTube", href: "https://www.youtube.com/@EWAN-SSK" },
+];
+
 const Footer = () => {
   return (
     <footer className="relative overflow-hidden border-t border-primary/10 section-navy-deep">
@@ -29,7 +37,7 @@ const Footer = () => {
 
       <div className="container mx-auto px-6 py-16 relative z-10">
         {/* Top: brand + nav */}
-        <div className="grid md:grid-cols-4 gap-10 mb-12">
+        <div className="grid md:grid-cols-5 gap-10 mb-12">
           <div className="md:col-span-1">
             <motion.span
               className="text-3xl font-serif font-bold gradient-text tracking-wider block mb-3"
@@ -56,6 +64,24 @@ const Footer = () => {
               </ul>
             </div>
           ))}
+
+          <div>
+            <h4 className="text-xs uppercase tracking-[0.2em] text-primary/80 font-semibold mb-4">Socials</h4>
+            <ul className="space-y-2">
+              {socialLinks.map((social) => (
+                <li key={social.label}>
+                  <a
+                    href={social.href}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="text-sm text-muted-foreground hover:text-primary transition-colors"
+                  >
+                    {social.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
 
         {/* Certifications */}

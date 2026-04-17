@@ -27,10 +27,10 @@ const Index = () => {
       <ClientLogosSection />
       <CaseStudySection />
       <WhyEwanSection />
-      <InstitutionalTrustSection />
       <PartnersSection />
       <SectorsSection />
       <TestimonialsSection />
+      <InstitutionalTrustSection />
       <FoundersSection />
       <ContactSection />
       <Footer />
