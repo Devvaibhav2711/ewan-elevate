@@ -43,7 +43,7 @@ const Navbar = () => {
             src="/logo.png"
             alt="Ewan Business Solutions"
             className="h-10 sm:h-12 w-auto object-contain"
-            whileHover={{ scale: 1.05, filter: "drop-shadow(0 0 12px rgba(208,170,55,0.5))" }}
+            whileHover={{ scale: 1.05, filter: "drop-shadow(0 0 12px rgba(212,255,0,0.3))" }}
             transition={{ type: "spring", stiffness: 400, damping: 15 }}
           />
         </a>
@@ -86,7 +86,7 @@ const Navbar = () => {
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.8, type: "spring", stiffness: 200 }}
-            whileHover={{ scale: 1.05, boxShadow: "0 0 35px rgba(208,170,55,0.5)" }}
+            whileHover={{ scale: 1.05, boxShadow: "0 0 20px rgba(212,255,0,0.3)" }}
             whileTap={{ scale: 0.95 }}
             className="flex items-center gap-2 px-5 py-2.5 rounded-full gold-gradient text-background font-semibold text-sm transition-all duration-300 card-shine animate-pulse-glow"
           >

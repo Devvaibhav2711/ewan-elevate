@@ -4,7 +4,7 @@ import { ArrowRight, Sparkles, MessageCircle, Languages } from "lucide-react";
 const FloatingParticle = ({ delay, x, y, size }: { delay: number; x: string; y: string; size: number }) => (
   <motion.div
     className="absolute rounded-full pointer-events-none"
-    style={{ left: x, top: y, width: size, height: size, background: "hsl(40 85% 58% / 0.4)" }}
+    style={{ left: x, top: y, width: size, height: size, background: "hsl(70 100% 50% / 0.35)" }}
     animate={{ y: [0, -40, 0], opacity: [0, 0.8, 0], scale: [0.5, 1, 0.5] }}
     transition={{ duration: 5, delay, repeat: Infinity, ease: "easeInOut" }}
   />
@@ -23,7 +23,7 @@ const ContactSection = () => {
       <FloatingParticle delay={3} x="85%" y="20%" size={3} />
 
       <div className="absolute inset-0 pointer-events-none opacity-[0.04]" style={{
-        backgroundImage: "linear-gradient(rgba(208,170,55,0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(208,170,55,0.3) 1px, transparent 1px)",
+        backgroundImage: "linear-gradient(rgba(212,255,0,0.24) 1px, transparent 1px), linear-gradient(90deg, rgba(212,255,0,0.24) 1px, transparent 1px)",
         backgroundSize: "60px 60px"
       }} />
 
@@ -67,7 +67,7 @@ const ContactSection = () => {
           >
             <motion.a
               href="mailto:hello@ewan.com?subject=Market Entry"
-              whileHover={{ scale: 1.05, boxShadow: "0 0 50px rgba(208,170,55,0.5)" }}
+              whileHover={{ scale: 1.05, boxShadow: "0 0 24px rgba(212,255,0,0.3)" }}
               whileTap={{ scale: 0.97 }}
               className="inline-flex items-center gap-2 px-7 py-4 rounded-full gold-gradient text-background font-semibold text-sm tracking-wider uppercase card-shine shadow-gold-md"
             >

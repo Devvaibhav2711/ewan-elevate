@@ -30,7 +30,7 @@ const ClientLogosSection = () => {
               <motion.div
                 key={`${client}-${i}`}
                 className="shrink-0 px-8 py-5 rounded-xl glass-card flex items-center justify-center min-w-[200px]"
-                whileHover={{ scale: 1.05, borderColor: "hsl(40 85% 58% / 0.4)" }}
+                whileHover={{ scale: 1.05, borderColor: "hsl(70 100% 50% / 0.45)" }}
               >
                 <span className="text-base lg:text-lg font-serif font-semibold text-foreground/70 hover:text-primary transition-colors whitespace-nowrap">
                   {client}

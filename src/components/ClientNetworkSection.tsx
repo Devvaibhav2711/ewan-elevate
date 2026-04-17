@@ -24,7 +24,7 @@ const ClientNetworkSection = () => {
         <motion.path
           d="M0,60 Q360,120 720,60 T1440,60"
           fill="none"
-          stroke="hsl(40 85% 58% / 0.1)"
+          stroke="hsl(70 100% 50% / 0.14)"
           strokeWidth="2"
           initial={{ pathLength: 0 }}
           whileInView={{ pathLength: 1 }}
@@ -34,7 +34,7 @@ const ClientNetworkSection = () => {
         <motion.path
           d="M0,80 Q360,20 720,80 T1440,80"
           fill="none"
-          stroke="hsl(260 50% 55% / 0.08)"
+          stroke="hsl(199 100% 50% / 0.12)"
           strokeWidth="1.5"
           initial={{ pathLength: 0 }}
           whileInView={{ pathLength: 1 }}
@@ -73,7 +73,7 @@ const ClientNetworkSection = () => {
         {/* Divider with animated line */}
         <motion.div
           className="w-full h-px mb-16 mx-auto max-w-2xl"
-          style={{ background: "linear-gradient(90deg, transparent, hsl(var(--gold) / 0.3), hsl(var(--purple) / 0.2), transparent)" }}
+          style={{ background: "linear-gradient(90deg, transparent, hsl(var(--gold) / 0.35), hsl(var(--gold-light) / 0.3), hsl(var(--gold-dark) / 0.3), transparent)" }}
           initial={{ scaleX: 0 }}
           whileInView={{ scaleX: 1 }}
           viewport={{ once: true }}
@@ -93,7 +93,7 @@ const ClientNetworkSection = () => {
             >
               <motion.div
                 className="w-16 h-16 rounded-full glass-card border border-primary/10 flex items-center justify-center mb-3 relative"
-                whileHover={{ scale: 1.15, boxShadow: "0 0 30px hsl(40 85% 58% / 0.2)" }}
+                whileHover={{ scale: 1.15, boxShadow: "0 0 20px rgba(212,255,0,0.3)" }}
               >
                 <sector.icon className="w-7 h-7 text-foreground/50 group-hover:text-primary transition-colors duration-500" />
                 {/* Animated ring on hover */}
