@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Menu, X, MessageCircle, ChevronDown } from "lucide-react";
+import { Menu, X, MessageCircle } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const navLinks = [
@@ -21,7 +21,6 @@ const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [lang, setLang] = useState("EN");
-  const [langOpen, setLangOpen] = useState(false);
 
   useEffect(() => {
     const handler = () => setIsScrolled(window.scrollY > 50);
@@ -67,34 +66,18 @@ const Navbar = () => {
 
         <div className="hidden lg:flex items-center gap-3 shrink-0">
           {/* Language switcher */}
-          <div className="relative">
-            <button
-              onClick={() => setLangOpen(!langOpen)}
-              className="flex items-center gap-1 px-3 py-1.5 rounded-full border border-primary/20 text-xs text-foreground/70 hover:text-primary hover:border-primary/40 transition-all"
-            >
-              {lang}
-              <ChevronDown className="w-3 h-3" />
-            </button>
-            <AnimatePresence>
-              {langOpen && (
-                <motion.div
-                  initial={{ opacity: 0, y: -8 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -8 }}
-                  className="absolute right-0 top-full mt-2 nav-glass rounded-xl py-2 min-w-[120px] shadow-xl"
-                >
-                  {languages.map((l) => (
-                    <button
-                      key={l.code}
-                      onClick={() => { setLang(l.code); setLangOpen(false); }}
-                      className="block w-full text-left px-4 py-2 text-xs text-foreground/70 hover:text-primary hover:bg-primary/5 transition-colors"
-                    >
-                      {l.label}
-                    </button>
-                  ))}
-                </motion.div>
-              )}
-            </AnimatePresence>
+          <div className="flex items-center rounded-full border border-primary/20 p-1">
+            {languages.map((l) => (
+              <button
+                key={l.code}
+                onClick={() => setLang(l.code)}
+                className={`px-2.5 py-1 rounded-full text-xs transition-colors ${
+                  lang === l.code ? "text-primary bg-primary/10" : "text-foreground/60 hover:text-primary"
+                }`}
+              >
+                {l.code}
+              </button>
+            ))}
           </div>
 
           {/* Sticky CTA */}
@@ -178,6 +161,19 @@ const Navbar = () => {
           </motion.div>
         )}
       </AnimatePresence>
+
+      <motion.a
+        href="#contact"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 1 }}
+        whileHover={{ scale: 1.03 }}
+        whileTap={{ scale: 0.97 }}
+        className="lg:hidden fixed bottom-4 right-4 z-[60] flex items-center gap-2 px-4 py-2.5 rounded-full gold-gradient text-background font-semibold text-xs shadow-gold-lg"
+      >
+        <MessageCircle className="w-3.5 h-3.5" />
+        Ask Soham - 15 Min Free
+      </motion.a>
     </motion.nav>
   );
 };

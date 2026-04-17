@@ -5,9 +5,9 @@ import { Clock, Languages, Users, Briefcase, MapPin } from "lucide-react";
 const stats = [
   { value: 60000, suffix: "+", label: "Interpretation Hours", icon: Clock },
   { value: 125, suffix: "+", label: "Languages", icon: Languages },
-  { value: 250, suffix: "+", label: "Clients Served", icon: Users },
+  { value: 250, suffix: "+", label: "Clients", icon: Users },
   { value: 10, suffix: "+", label: "Sectors", icon: Briefcase },
-  { value: 5, suffix: "y / 2", label: "Years / Countries", icon: MapPin },
+  { display: "5 years / 2 countries", label: "Track Record", icon: MapPin },
 ];
 
 const StatsSection = () => {
@@ -39,7 +39,7 @@ const StatsSection = () => {
 };
 
 function StatItem({ stat, isVisible, index }: { stat: typeof stats[0]; isVisible: boolean; index: number }) {
-  const count = useCountUp(stat.value, 2000, isVisible);
+  const count = useCountUp(stat.value ?? 0, 2000, isVisible);
   const Icon = stat.icon;
 
   return (
@@ -61,7 +61,7 @@ function StatItem({ stat, isVisible, index }: { stat: typeof stats[0]; isVisible
         animate={isVisible ? { scale: [1, 1.08, 1] } : {}}
         transition={{ delay: index * 0.1 + 0.5, duration: 0.5 }}
       >
-        {count.toLocaleString()}{stat.suffix}
+        {stat.display ?? `${count.toLocaleString()}${stat.suffix ?? ""}`}
       </motion.div>
       <p className="text-muted-foreground text-xs sm:text-sm font-medium tracking-wide uppercase">{stat.label}</p>
       <motion.div

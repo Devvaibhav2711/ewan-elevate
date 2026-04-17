@@ -42,7 +42,7 @@ const InstitutionalTrustSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            Recognised by the <span className="gradient-text italic">Consulate General of China</span>
+            Recognised by <span className="gradient-text italic">Consulate General of China</span>
           </motion.h2>
 
           <motion.p

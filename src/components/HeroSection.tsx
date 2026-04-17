@@ -73,7 +73,8 @@ const HeroSection = () => {
               <Globe className="w-4 h-4 text-primary" />
               {regions.map((r, i) => (
                 <span key={r} className="text-xs sm:text-sm text-primary/80 font-medium tracking-wider uppercase">
-                  {r}{i < regions.length - 1 && <span className="mx-2 text-primary/30">•</span>}
+                  {r}
+                  {i < regions.length - 1 && <span className="mx-1 text-primary/40">.</span>}
                 </span>
               ))}
             </motion.div>
