@@ -84,7 +84,7 @@ const Footer = () => {
                   href={social.href}
                   target="_blank"
                   rel="noreferrer"
-                  className="rounded-full border border-white/20 bg-white/5 px-3 py-1.5 text-xs font-medium text-foreground/80 transition-colors hover:border-primary/40 hover:text-primary"
+                  className="rounded-full border border-primary/20 bg-primary/5 px-3 py-1.5 text-xs font-medium text-foreground/80 transition-colors hover:border-primary/40 hover:text-primary"
                 >
                   {social.label}
                 </a>
@@ -135,7 +135,7 @@ const Footer = () => {
                 </span>
               </motion.div>
             ))}
-            <span className="h-4 w-px bg-white/10 hidden md:block" aria-hidden />
+            <span className="h-4 w-px bg-primary/15 hidden md:block" aria-hidden />
             <a
               href="https://bhashikskill.co.in"
               target="_blank"

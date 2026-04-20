@@ -30,7 +30,7 @@ const clients: ClientLogo[] = [
 const ClientLogosSection = () => {
   return (
     <section
-      className="relative overflow-hidden border-y border-zinc-200/90 bg-white   p-6 text-zinc-900 "
+      className="relative overflow-hidden border-y border-zinc-300/70 bg-[#f3f0f7] p-6 text-zinc-800"
       aria-label="Client logos"
     >
       <div className="container relative z-10 mx-auto px-6">

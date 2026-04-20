@@ -74,17 +74,17 @@ const InstitutionalTrustSection = () => {
             {consulateLetters.map((letter, index) => (
               <motion.figure
                 key={letter.src}
-                className="overflow-hidden rounded-[28px] border border-white/70 bg-[#f8f5ef] shadow-[0_20px_60px_rgba(0,0,0,0.22)]"
+                className="overflow-hidden rounded-[28px] border border-border/80 bg-[#f3f0f7] shadow-[0_20px_60px_rgba(52,43,72,0.2)]"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.7, delay: index * 0.1 }}
               >
-                <div className="relative bg-white p-4 sm:p-5">
+                <div className="relative bg-[#faf8fd] p-4 sm:p-5">
                   <img
                     src={letter.src}
                     alt={letter.alt}
-                    className="w-full rounded-xl border border-neutral-200 object-cover"
+                    className="w-full rounded-xl border border-neutral-300/70 object-cover"
                     loading="lazy"
                   />
                 </div>

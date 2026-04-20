@@ -24,7 +24,7 @@ const ClientNetworkSection = () => {
         <motion.path
           d="M0,60 Q360,120 720,60 T1440,60"
           fill="none"
-          stroke="hsl(70 100% 50% / 0.14)"
+          stroke="hsl(var(--primary) / 0.22)"
           strokeWidth="2"
           initial={{ pathLength: 0 }}
           whileInView={{ pathLength: 1 }}
@@ -34,7 +34,7 @@ const ClientNetworkSection = () => {
         <motion.path
           d="M0,80 Q360,20 720,80 T1440,80"
           fill="none"
-          stroke="hsl(199 100% 50% / 0.12)"
+          stroke="hsl(var(--accent) / 0.2)"
           strokeWidth="1.5"
           initial={{ pathLength: 0 }}
           whileInView={{ pathLength: 1 }}
@@ -93,7 +93,7 @@ const ClientNetworkSection = () => {
             >
               <motion.div
                 className="w-16 h-16 rounded-full glass-card border border-primary/10 flex items-center justify-center mb-3 relative"
-                whileHover={{ scale: 1.15, boxShadow: "0 0 20px rgba(212,255,0,0.3)" }}
+                whileHover={{ scale: 1.15, boxShadow: "0 0 20px rgba(124, 106, 163, 0.3)" }}
               >
                 <sector.icon className="w-7 h-7 text-foreground/50 group-hover:text-primary transition-colors duration-500" />
                 {/* Animated ring on hover */}

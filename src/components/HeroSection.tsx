@@ -43,14 +43,14 @@ const HeroSection = () => {
       <div className="glow-orb glow-orb-gold w-[400px] h-[400px] -top-40 -right-40" />
       <div className="glow-orb glow-orb-purple w-[300px] h-[300px] bottom-20 -left-20" />
 
-      <FloatingParticle delay={0} x="10%" y="20%" size={4} color="hsl(70 100% 50% / 0.4)" />
-      <FloatingParticle delay={1} x="80%" y="30%" size={3} color="hsl(145 100% 39% / 0.32)" />
-      <FloatingParticle delay={2} x="60%" y="70%" size={5} color="hsl(199 100% 50% / 0.26)" />
-      <FloatingParticle delay={0.5} x="30%" y="80%" size={3} color="hsl(145 100% 39% / 0.28)" />
-      <FloatingParticle delay={1.5} x="90%" y="60%" size={4} color="hsl(70 100% 50% / 0.3)" />
+      <FloatingParticle delay={0} x="10%" y="20%" size={4} color="hsl(var(--primary) / 0.35)" />
+      <FloatingParticle delay={1} x="80%" y="30%" size={3} color="hsl(var(--accent) / 0.3)" />
+      <FloatingParticle delay={2} x="60%" y="70%" size={5} color="hsl(var(--purple-light) / 0.24)" />
+      <FloatingParticle delay={0.5} x="30%" y="80%" size={3} color="hsl(var(--accent) / 0.26)" />
+      <FloatingParticle delay={1.5} x="90%" y="60%" size={4} color="hsl(var(--primary) / 0.28)" />
 
       <div className="absolute inset-0 pointer-events-none opacity-[0.04]" style={{
-        backgroundImage: "linear-gradient(rgba(212,255,0,0.24) 1px, transparent 1px), linear-gradient(90deg, rgba(212,255,0,0.24) 1px, transparent 1px)",
+        backgroundImage: "linear-gradient(rgba(126,108,168,0.2) 1px, transparent 1px), linear-gradient(90deg, rgba(126,108,168,0.2) 1px, transparent 1px)",
         backgroundSize: "60px 60px"
       }} />
 
@@ -100,7 +100,7 @@ const HeroSection = () => {
             <motion.div variants={fadeUpItem} className="flex flex-wrap items-center gap-4">
               <motion.a
                 href="#services"
-                whileHover={{ scale: 1.05, boxShadow: "0 0 24px rgba(212,255,0,0.3)" }}
+                whileHover={{ scale: 1.05, boxShadow: "0 0 24px rgba(124, 106, 163, 0.34)" }}
                 whileTap={{ scale: 0.97 }}
                 className="inline-flex items-center gap-2 px-7 py-4 rounded-full gold-gradient text-background font-semibold text-sm tracking-wider uppercase transition-all duration-300 card-shine shadow-gold-md"
               >
@@ -109,7 +109,7 @@ const HeroSection = () => {
               </motion.a>
               <motion.a
                 href="#language"
-                whileHover={{ scale: 1.05, borderColor: "rgba(212,255,0,0.65)" }}
+                whileHover={{ scale: 1.05, borderColor: "rgba(124, 106, 163, 0.62)" }}
                 whileTap={{ scale: 0.97 }}
                 className="inline-flex items-center gap-2 px-7 py-4 rounded-full border-2 border-primary/30 text-foreground font-semibold text-sm tracking-wider uppercase transition-all duration-300 hover:bg-primary/5"
               >
